@@ -1,0 +1,236 @@
+<!DOCTYPE html><!--  Last Published: Wed Jul 31 2024 14:06:26 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="667411a548746a62e3132d33" data-wf-site="667411a548746a62e3132d25">
+<head>
+  <meta charset="utf-8">
+  <title>Callum Chard Portfolio</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/callumchard.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Rubik:regular,500,600,700,800,900"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+  html {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, rgba(0, 122, 204, 0.15), transparent 80%),
+                radial-gradient(circle at top right, rgba(0, 204, 153, 0.15), transparent 80%),
+                radial-gradient(circle at bottom left, rgba(204, 0, 204, 0.15), transparent 80%),
+                #212121; /* Dark grey background */
+    background-size: 300% 300%;
+    background-attachment: fixed; /* Ensure the background is fixed */
+    background-repeat: no-repeat;
+    animation: gradientAnimation 40s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
+</head>
+<body class="body">
+  <section id="Heading-with-links" class="section">
+    <div class="w-layout-blockcontainer container-2 w-container">
+      <div class="div-block-8">
+        <div class="div-block-7">
+          <div class="w-embed">
+            <style>
+  .gradient-text {
+    background: linear-gradient(150deg, #34C2FF, #0066FF); /* Adjust colors as needed */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+</style>
+          </div>
+          <h1 class="heading first-head">Callum Chard, <br>computing graduate from <span class="text-span gradient-text">Bournemouth University</span></h1>
+          <h1 class="heading second-head">Callum Chard, <br>computing graduate from <br>‍<span class="text-span gradient-text">Bournemouth University</span></h1>
+          <div class="div-block-9">
+            <a href="#About" class="link">About</a>
+            <a href="documents/Callum-Chard-CV.pdf" target="_blank" class="link">CV</a>
+            <a href="https://www.linkedin.com/in/callum-chard/" target="_blank" class="link">LinkedIn</a>
+            <a href="https://github.com/CallumCha" class="w-inline-block"><img src="images/github-mark-white-1.svg" loading="eager" width="22" height="22" alt="" class="image-12 link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-2">
+    <div class="w-layout-blockcontainer container w-container">
+      <h3 class="heading-2">Featured Projects</h3>
+      <div class="code-embed w-embed">
+        <style>
+  .project-wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden; /* Remove vertical scroll */
+    width: 100%;
+    position: relative;
+    padding: 10px 0; /* Adjust as needed */
+  }
+  .project-card {
+    flex: 0 0 210px; /* Fixed width for each card */
+    margin: 0 10px; /* Adjust as needed */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    overflow-y: hidden; /* Ensure no vertical scroll */
+  }
+  .project-card:hover {
+    transform: translateY(-15px); /* Move up on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Enhanced drop shadow */
+    background-color: #212121; /* Change to your preferred color */
+  }
+  /* Hide scrollbars on Webkit browsers */
+  .project-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbars on IE and Edge */
+  .project-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  /* Fading effect for overflow content */
+  .fade-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .fade-mask-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+  .fade-mask-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+  /* Only apply fading effect if there is overflow */
+  @media (max-width: 1000px) { /* Adjust the max-width as needed for responsiveness */
+    .project-wrapper {
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+  }
+  img {
+  borde-radius: 24px
+  }
+</style>
+      </div>
+      <div class="div-block-4 project-wrapper">
+        <div id="triggerId" data-w-id="c7e23f72-bb44-a5dc-54f2-5940ae3cedbf" class="div-block-5 project-card modal-button w-node-c7e23f72-bb44-a5dc-54f2-5940ae3cedbf-e3132d33"><img src="images/image-29.jpg" loading="lazy" alt="MicroNav Thumbnail
+" class="image-2"></div>
+        <div id="w-node-_2850b21e-444f-d9b0-9cb2-b807b4941e49-e3132d33" class="div-block-5 project-card"><img src="images/image-22.jpg" loading="lazy" alt="UKBT app thumbnail
+" class="image-3"></div>
+        <div id="w-node-_15007258-2aa8-8c34-3622-bed848dddded-e3132d33" class="div-block-5 project-card"><img src="images/image-28.jpg" loading="lazy" alt="Skill Drill thumbnail
+" class="image-4"></div>
+        <div id="w-node-b06e4c67-3ee1-1abe-0af4-e7741c7b8b21-e3132d33" class="div-block-5 project-card"><img src="images/image-32.jpg" loading="lazy" alt="Machine learning
+" class="image-5"></div>
+      </div>
+    </div>
+  </section>
+  <section id="About">
+    <div class="w-layout-blockcontainer container-4 w-container">
+      <h3 class="heading-3">About</h3>
+      <div class="text-block-3">I just finished studying computing and love solving problems in creative ways. My past work in customer service taught me how to handle busy situations and be friendly and clear when talking to people. At Micronav, I was the only UI/UX designer. I connected the product team and the development team, helping to make sure our designs looked good and worked well. This job helped me learn how to work well with different groups of people. I love computing and finding new ways to solve tech problems. I also enjoy making systems run better and designing easy-to-use interfaces. Besides tech, I love playing volleyball. I was the captain of the men’s indoor and beach volleyball teams at Bournemouth University. This role taught me how to lead and motivate my team.</div>
+    </div>
+  </section>
+  <section>
+    <div class="w-layout-blockcontainer container-3 w-container">
+      <div class="text-block-2">This website is a work in progress.</div>
+    </div>
+  </section>
+  <div data-w-id="ee26f8d1-e144-e82a-e1a2-e77e8837d541" class="w-layout-blockcontainer micro modal-bg w-container">
+    <div class="w-embed">
+      <style>
+  .sticky-div {
+    top: 0;
+    z-index: 10; /* Ensure it is above other elements */
+        backdrop-filter: blur(300px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(300px); /* Apply the blur effect for Safari */
+  }
+  .backdrop-filter-div {
+    backdrop-filter: blur(300px); /* Apply the blur effect */
+    -webkit-backdrop-filter: blur(300px); /* Apply the blur effect for Safari */
+  }
+</style>
+    </div>
+    <div class="w-layout-blockcontainer container-9 concon w-container">
+      <div class="div-block-22">
+        <div class="image-section-close">
+          <div data-w-id="92f6289a-4265-af3b-3bcb-0d48c93a98e8" class="closebutton close">
+            <h2 class="heading-4">+</h2>
+          </div><img src="images/Group-29.jpg" loading="lazy" sizes="100vw" srcset="images/Group-29-p-500.jpg 500w, images/Group-29-p-800.jpg 800w, images/Group-29-p-1080.jpg 1080w, images/Group-29-p-1600.jpg 1600w, images/Group-29-p-2000.jpg 2000w, images/Group-29.jpg 2148w" alt="" class="image-6">
+        </div>
+        <div class="placement"><img src="images/Group-29.jpg" loading="lazy" sizes="100vw" srcset="images/Group-29-p-500.jpg 500w, images/Group-29-p-800.jpg 800w, images/Group-29-p-1080.jpg 1080w, images/Group-29-p-1600.jpg 1600w, images/Group-29-p-2000.jpg 2000w, images/Group-29.jpg 2148w" alt="" class="image-6"></div>
+        <div class="sticky-div">
+          <div class="div-block-14 backdrop-filter-div"><img src="images/Group-24.svg" loading="lazy" alt="" class="image-7">
+            <div class="text-block-4">Jun - Sept 2023</div>
+          </div>
+          <div class="w-embed">
+            <style>
+	.sticky-div {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  }
+</style>
+          </div>
+        </div>
+        <div class="div-block-17 content-div">
+          <div class="w-layout-blockcontainer container-6 w-container">
+            <p class="paragraph"><span class="text-span-2"><strong class="bold-text">My Role</strong></span><br> <span class="text-span-3">Sole UI/UX</span> - Visual Design, User Flows, Rapid Prototyping  <br><br><span class="text-span-4">Overview</span><br>During my internship at Micro Nav Ltd, I led the UI/UX design for the BEST Insights app, an advanced air traffic control simulation tool. This role involved developing user-friendly and intuitive interfaces for several critical components of the app. Additionally, I created high-fidelity prototypes using Figma, ensuring each design was aligned with the project’s objectives and user needs. </p>
+          </div>
+          <div class="w-layout-blockcontainer container-8 w-container"><img src="images/IMG_0038.PNG" loading="lazy" sizes="100vw" srcset="images/IMG_0038-p-500.png 500w, images/IMG_0038-p-800.png 800w, images/IMG_0038-p-1080.png 1080w, images/IMG_0038.PNG 1194w" alt="MicroNav concept art
+" class="image-8">
+            <p class="paragraph-2">My first task at MicroNav was to work with the Product Manager to create some concept designs for Best Insights, which is a sophisticated tool designed to enhance air traffic control training by providing rich, data-driven insights. It allows for the analysis and replay of training sessions with integrated instructor feedback, viewable on any device, which supports both on-site and remote learning. Additionally, BEST Insights offers powerful features for operational analysis, making it a versatile tool for improving both training and everyday operations in air traffic management​.</p>
+          </div>
+          <div class="w-layout-blockcontainer container-8 w-container"><img src="images/IMG_0110.PNG" loading="lazy" sizes="100vw" srcset="images/IMG_0110-p-500.png 500w, images/IMG_0110-p-800.png 800w, images/IMG_0110-p-1080.png 1080w, images/IMG_0110-p-1600.png 1600w, images/IMG_0110-p-2000.png 2000w, images/IMG_0110.PNG 2388w" alt="" class="image-8">
+            <p class="paragraph-2">After going over design requirements and working with the Product Manager we settled on some designs he was happy with. From there I started work on the overall theme and details on individual parts of the application.   <br><br>I managed all of the project within FIgma where I split each tool within the app into its own page where I created designs that I then worked on with the product manager.</p>
+          </div>
+          <div class="w-layout-blockcontainer container-12 w-container">
+            <div style="padding-top:56.17021276595745%" class="video-2 w-video w-embed"><iframe class="embedly-embed" src="https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FFal-hHU6Di4%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DFal-hHU6Di4&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FFal-hHU6Di4%2Fhqdefault.jpg&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube" width="940" height="528" scrolling="no" allowfullscreen="" title="MicroNav 3D Debrief view"></iframe></div>
+            <p class="paragraph-2">This is a video demonstrating the 3D view debrief tool for Best Insights.</p>
+          </div>
+          <div class="w-layout-blockcontainer container-13 w-container"><img src="images/IMG_0161.PNG" loading="lazy" sizes="100vw" srcset="images/IMG_0161-p-500.png 500w, images/IMG_0161-p-800.png 800w, images/IMG_0161-p-1080.png 1080w, images/IMG_0161-p-1600.png 1600w, images/IMG_0161-p-2000.png 2000w, images/IMG_0161.PNG 2388w" alt="" class="image-11"><img src="images/IMG_0163.PNG" loading="lazy" sizes="100vw" srcset="images/IMG_0163-p-500.png 500w, images/IMG_0163-p-800.png 800w, images/IMG_0163-p-1080.png 1080w, images/IMG_0163-p-1600.png 1600w, images/IMG_0163-p-2000.png 2000w, images/IMG_0163.PNG 2388w" alt="" class="image-10"><img src="images/IMG_0162.PNG" loading="lazy" sizes="100vw" srcset="images/IMG_0162-p-500.png 500w, images/IMG_0162-p-800.png 800w, images/IMG_0162-p-1080.png 1080w, images/IMG_0162-p-1600.png 1600w, images/IMG_0162-p-2000.png 2000w, images/IMG_0162.PNG 2388w" alt="" class="image-9"></div>
+          <div class="w-layout-blockcontainer container-14 w-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=667411a548746a62e3132d25" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+Webflow.push(function() {
+   $('.modal-button').click(function(e) {
+      e.preventDefault();
+   $('body').css('overflow', 'hidden');
+ });  $('.close').click(function(e) {
+      e.preventDefault();
+    $('body').css('overflow', 'auto');
+ });
+});
+</script>
+  <script>
+Webflow.push(function() {
+  $('.modal-bg').click(function(e) {
+    e.preventDefault();
+       $('body').css('overflow', 'auto');
+ });
+});
+</script>
+</body>
+</html>
